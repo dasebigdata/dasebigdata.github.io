@@ -3,6 +3,8 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
+        <!-- search-base html -->
+
         {%- include head.html -%}
 
         {% assign reversed_posts = site.posts | reverse %}
@@ -21,11 +23,7 @@
                     <!-- Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                        {% if page.title %}
-                            <a href="." >{{ page.title | escape }}</a>
-                        {% else %}
-                            <a href="." >{{ site.title | escape }}</a>
-                        {% endif %}
+                        <a href="." >{{ site.title | escape }}</a>
                     </h1>
                 </div>
 
@@ -46,9 +44,9 @@
 
                             <div id="book-search-results">
                                 <div class="search-noresults">
-                                    
+
                                 </div>
-                    
+
                                 {%- include search.html -%}
                             </div>
                         </div>
@@ -65,6 +63,5 @@
         </div>
 
         {%- include footer.html -%}
-
     </body>
 </html>

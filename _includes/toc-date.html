@@ -7,17 +7,17 @@
             <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
         </div>
         <ul class="summary">
-            {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
-            {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
-            {% endif %}
-                <a href="{{site.baseurl}}/">
-                    {{ site.title | escape }}
-                </a>
-            </li>
+<!--            {% if page.url == "/index.html" or page.url == "/" %}-->
+<!--            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">-->
+<!--            {% else %}-->
+<!--            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">-->
+<!--            {% endif %}-->
+<!--                <a href="{{site.baseurl}}/">-->
+<!--                    {{ site.title | escape }}-->
+<!--                </a>-->
+<!--            </li>-->
 
-            <li class="divider"></li>
+<!--            <li class="divider"></li>-->
 
             {% for collection in site.collections %}
                 <!-- <p>{{ collection.label }}</p> -->
@@ -35,7 +35,11 @@
                         <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
                         {% endif %}
                             <a href="{{site.baseurl}}{{post.url}}">
-                                {{ post.title | escape }}
+                                {% if post.title == site.title %}
+                                    {{ "教材简介" }}
+                                {% else %}
+                                    {{ post.title | escape }}
+                                {% endif %}
                             </a>
                             {% if site.toc.enabled %}
                                 {% if page.url == post.url %}
@@ -45,17 +49,17 @@
                         </li>
                     {% endfor %}
 
-                    {% if reversed_posts.size > 0 %}
-                        <li class="divider"></li>
-                    {% endif %}
+<!--                    {% if reversed_posts.size > 0 %}-->
+<!--                        <li class="divider"></li>-->
+<!--                    {% endif %}-->
                 {% endif %}
             {% endfor %}
 
-            <li>
-                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
-                    Fork it Now!
-                </a>
-            </li>
+<!--            <li>-->
+<!--                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">-->
+<!--                    Fork it Now!-->
+<!--                </a>-->
+<!--            </li>-->
         </ul>
     </nav>
 </div>

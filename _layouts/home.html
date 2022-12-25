@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
+        <!-- home html -->
 
         {%- include head.html -%}
 
@@ -20,11 +21,7 @@
                     <!-- Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                        {% if page.title %}
-                            <a href="." >{{ page.title | escape }}</a>
-                        {% else %}
-                            <a href="." >{{ site.title | escape }}</a>
-                        {% endif %}
+                        <a href="." >{{ site.title | escape }}</a>
                     </h1>
                 </div>
 
@@ -48,6 +45,5 @@
         </div>
 
         {%- include footer.html -%}
-
     </body>
 </html>

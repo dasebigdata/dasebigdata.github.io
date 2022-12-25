@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            分布式计算系统
+longtitle:        分布式计算系统
+author:           Chen Xu
+email:            cxu@dase.ecnu.edu
 description: >
-  Build Jekyll site with the GitBook style.
+  分布式计算系统。
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://dasebigdata.github.io'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -41,7 +41,8 @@ syntax_highlighter_style: colorful
 markdown_ext:     markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
+#permalink:        /:categories/:year-:month-:day-:title:output_ext
+permalink:        /:title
 
 exclude:
   - _drafts
@@ -51,7 +52,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-page_width: 800px
+page_width: 61.8%
 
 destination:      ./_site
 incremental:      false
@@ -59,5 +60,5 @@ regenerate:       true
 
 plugins:
   - jekyll-feed
-  - jekyll-readme-index
+#  - jekyll-readme-index
   - jemoji
